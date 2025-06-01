@@ -17,6 +17,7 @@ public class OrderHandler {
     @KafkaListener(topics = "${kafka.topic.order-created}", groupId = "order-service-group")
     void getOrder(UserOrderDto userOrderDto) {
         log.info("message received");
+        log.info(userOrderDto.toString());
         notifyController.sendNotification(userOrderDto);
     }
 }
