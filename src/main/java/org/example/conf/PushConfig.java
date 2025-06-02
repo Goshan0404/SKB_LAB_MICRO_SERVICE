@@ -19,8 +19,8 @@ public class PushConfig {
     @Bean
     public PushService pushService() throws GeneralSecurityException {
         PushService pushService = new PushService();
-        pushService.setPublicKey(publicKey);
-        pushService.setPrivateKey(privateKey);
+//        pushService.setPublicKey(publicKey);
+//        pushService.setPrivateKey(privateKey);
         return pushService;
     }
 }
